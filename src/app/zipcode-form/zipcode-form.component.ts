@@ -28,12 +28,13 @@ export class ZipcodeFormComponent implements OnInit {
   }
 
   onKeyUp(zip) {
+    if (!!this.timer) { clearTimeout(this.timer); }
     this.timer = setTimeout(() => { this.processZip(zip); }, 2000);
   }
 
-  onKeyDown() {
+  /*onKeyDown() {
     console.log(this.timer);
     clearTimeout(this.timer);
-  }
+  }*/
 
 }

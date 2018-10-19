@@ -2,7 +2,7 @@
   <form (submit)="processZip(zip.value)" #form>
     <div class="field">
       <label for="zip">ZIP Code: </label>
-      <input type="text" name="zip" maxlength="5" (keydown)="onKeyDown()" (keyup)="onKeyUp(zip.value)" #zip>
+      <input type="text" name="zip" maxlength="5" (keyup)="onKeyUp(zip.value)" #zip>
     </div>
     <button mat-raised-button color="primary">Lookup</button>
   </form>
