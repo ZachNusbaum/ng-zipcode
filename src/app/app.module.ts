@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ZipcodeFormComponent } from './zipcode-form/zipcode-form.component';
 
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HttpClientModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [ZippoService],
   bootstrap: [AppComponent]

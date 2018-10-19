@@ -1,8 +1,13 @@
-<form (submit)="processZip(zip.value)" #form>
-  <input type="text" name="zip" maxlength="5" #zip>
-  <input type="submit">
-</form>
-<div id="result" *ngIf="!!place">
-  <b><u>{{place["place name"]}}, {{place["state"]}}</u></b><br>
-  {{place.latitude}}, {{place.longitude}}
+<div class="zc-form">
+  <form (submit)="processZip(zip.value)" #form>
+    <div class="field">
+      <label for="zip">ZIP Code: </label>
+      <input type="text" name="zip" maxlength="5" #zip>
+    </div>
+    <button mat-raised-button color="primary">Lookup</button>
+  </form>
+  <div id="result" *ngIf="!!place">
+    <b><u>{{place["place name"]}}, {{place["state"]}}</u></b><br>
+    {{place.latitude}}, {{place.longitude}}
+  </div>
 </div>
