@@ -22,6 +22,8 @@ export class ZipcodeFormComponent implements OnInit {
       (response: any) => {
         console.log(response);
         this.place = response.places[0];
+      }, (error: any) => {
+        alert(`Error (ZIP: ${zip}): ` + error.statusText);
       }
     );
     return false;
