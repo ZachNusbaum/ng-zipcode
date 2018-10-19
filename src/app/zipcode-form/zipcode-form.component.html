@@ -8,7 +8,7 @@
   </form>
   <div id="result" *ngIf="!!place">
     <b><u>{{place["place name"]}}, {{place["state"]}}</u></b><br>
-    {{place.latitude}}, {{place.longitude}}
+    {{place.latitude}}, {{place.longitude}} <br>
     <img src="https://maps.googleapis.com/maps/api/staticmap?key={{key}}&center={{place.latitude}},{{place.longitude}}&zoom=12&size=225x225&maptype=hybrid&markers=size:small|{{place.latitude}},{{place.longitude}}&scale=2" alt="Google Map">
     
   </div>
