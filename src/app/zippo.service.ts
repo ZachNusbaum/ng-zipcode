@@ -11,4 +11,8 @@ export class ZippoService {
   public parse(zip) {
     return this.http.get(`https://api.zippopotam.us/us/${zip}`);
   }
+
+  public reverse(city: string, state: string) {
+    return this.http.get(`https://api.zippopotam.us/us/${state}/${city}`);
+  }
 }

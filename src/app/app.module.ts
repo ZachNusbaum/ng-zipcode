@@ -10,11 +10,13 @@ import { ZipcodeFormComponent } from './zipcode-form/zipcode-form.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { ReverseLookupFormComponent } from './reverse-lookup-form/reverse-lookup-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZipcodeFormComponent
+    ZipcodeFormComponent,
+    ReverseLookupFormComponent
   ],
   imports: [
     BrowserModule,
