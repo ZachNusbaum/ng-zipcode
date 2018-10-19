@@ -82,7 +82,8 @@ export class ReverseLookupFormComponent implements OnInit {
         console.log('Response:', response);
       },
       (error) => {
-        console.error('Error:', error);
+        this.result = false;
+        alert('Error: ' + 'Please enter a valid city name.');
       }
     );
     return false;
