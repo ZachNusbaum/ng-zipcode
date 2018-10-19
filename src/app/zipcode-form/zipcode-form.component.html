@@ -1,0 +1,8 @@
+<form (submit)="processZip(zip.value)" #form>
+  <input type="text" name="zip" maxlength="5" #zip>
+  <input type="submit">
+</form>
+<div id="result" *ngIf="!!place">
+  <b><u>{{place["place name"]}}, {{place["state"]}}</u></b><br>
+  {{place.latitude}}, {{place.longitude}}
+</div>
