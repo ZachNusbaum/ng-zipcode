@@ -10,6 +10,7 @@ import { ZipcodeFormComponent } from './zipcode-form/zipcode-form.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { ReverseLookupFormComponent } from './reverse-lookup-form/reverse-lookup-form.component';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReverseLookupFormComponent } from './reverse-lookup-form/reverse-lookup
     AppRoutingModule,
     NoopAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule
   ],
   providers: [ZippoService],
   bootstrap: [AppComponent]

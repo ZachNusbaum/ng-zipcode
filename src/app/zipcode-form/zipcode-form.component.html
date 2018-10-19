@@ -1,10 +1,10 @@
 <div class="zc-form">
   <form (submit)="processZip(zip.value)" #form>
-    <div class="field">
-      <label for="zip">ZIP Code: </label>
-      <input type="text" name="zip" maxlength="5" (keyup)="onKeyUp(zip.value)" #zip>
+    <div class="form-group">
+      <label for="zip">ZIP Code</label>
+      <input type="text" name="zip" maxlength="5" (keyup)="onKeyUp(zip.value)" class="form-control" #zip>
     </div>
-    <button mat-raised-button color="primary">Lookup</button>
+    <input type="submit" value="Lookup" class="btn btn-primary">
   </form>
   <div id="result" *ngIf="!!place">
     <b><u>{{place["place name"]}}, {{place["state"]}}</u></b><br>

@@ -1,10 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar>
-  <span>Zipcoder</span>
-</mat-toolbar>
-<h2>ZIP Code Lookup</h2>
-<app-zipcode-form></app-zipcode-form>
-<hr>
-<h2>Reverse ZIP Code Lookup</h2>
-<app-reverse-lookup-form></app-reverse-lookup-form>
+
+<div class="container">
+  <h1>Zipcoder</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>ZIP Code Lookup</h2>
+      <app-zipcode-form></app-zipcode-form>
+    </div>
+    <div class="col-md-6">
+      <h2>Reverse ZIP Code Lookup</h2>
+      <app-reverse-lookup-form></app-reverse-lookup-form>
+    </div>
+  </div>
+</div>
+
+
 <router-outlet></router-outlet>

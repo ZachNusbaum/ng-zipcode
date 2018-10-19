@@ -1,15 +1,15 @@
 <form (submit)="reverseLookup(cityInput.value, stateInput.value)" #form>
-  <div class="field">
+  <div class="form-group">
     <label for="city">City: </label>
-    <input type="text" name="city" #cityInput>
+    <input type="text" name="city" class="form-control" #cityInput>
   </div>
-  <div class="field">
+  <div class="form-group">
     <label for="state">State:</label>
-    <select name="state" id="state" #stateInput>
+    <select name="state" id="state" class="form-control" #stateInput>
       <option *ngFor="let state of states | keyvalue" value="{{state.key}}">{{state.value}}</option>
     </select>
   </div>
-  <input type="submit">
+  <input type="submit" value="Reverse Lookup" class="btn btn-primary">
 </form>
 
 <div *ngIf="!!result" id="results">
