@@ -1,5 +1,9 @@
 # Zipcoder
 
+## IMPORTANT
+
+Before deploying to production, make a copy of ```/src/environments/environment.ts``` and name it ```/src/environments/environment.prod.ts```. Update both files with your Google Static Maps API key.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
 
 ## Development server
