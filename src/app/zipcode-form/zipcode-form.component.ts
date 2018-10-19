@@ -1,5 +1,6 @@
 import { ZippoService } from './../zippo.service';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-zipcode-form',
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ZipcodeFormComponent implements OnInit {
   place;
   timer;
+  key = environment.googleKey;
 
   constructor(private zippo: ZippoService) { }
 
