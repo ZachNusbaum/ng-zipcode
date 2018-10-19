@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZipcodeFormComponent implements OnInit {
   place;
+  timer;
 
   constructor(private zippo: ZippoService) { }
 
@@ -16,6 +17,7 @@ export class ZipcodeFormComponent implements OnInit {
   }
 
   processZip(zip) {
+    if (zip.length < 5) { return false; }
     this.zippo.parse(zip).subscribe(
       (response: any) => {
         console.log(response);
@@ -23,6 +25,15 @@ export class ZipcodeFormComponent implements OnInit {
       }
     );
     return false;
+  }
+
+  onKeyUp(zip) {
+    this.timer = setTimeout(() => { this.processZip(zip); }, 2000);
+  }
+
+  onKeyDown() {
+    console.log(this.timer);
+    clearTimeout(this.timer);
   }
 
 }
