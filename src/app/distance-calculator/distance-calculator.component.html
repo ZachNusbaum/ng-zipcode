@@ -1,3 +1,18 @@
-<p>
-  distance-calculator works!
-</p>
+<form (submit)="calculateDistance(zip1.value, zip2.value)" #distanceForm>
+  <div class="form-group">
+    <label for="zip1">ZIP Code 1</label>
+    <input type="text" name="zip1" class="form-control" #zip1>
+  </div>
+
+  <div class="form-group">
+    <label for="zip2">ZIP Code 2</label>
+    <input type="text" name="zip2" class="form-control" #zip2>
+  </div>
+
+  <div class="form-group">
+    <input type="submit" value="Calculate" class="btn btn-primary">
+  </div>
+</form>
+<div id="result" *ngIf="!!distance">
+  <h5>ZIP codes {{zip1.value}} and {{zip2.value}} are {{distance}} miles apart.</h5>
+</div>
