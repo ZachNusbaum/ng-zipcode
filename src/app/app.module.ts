@@ -12,12 +12,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ReverseLookupFormComponent } from './reverse-lookup-form/reverse-lookup-form.component';
+import { DistanceCalculatorComponent } from './distance-calculator/distance-calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ZipcodeFormComponent,
-    ReverseLookupFormComponent
+    ReverseLookupFormComponent,
+    DistanceCalculatorComponent
   ],
   imports: [
     BrowserModule,
