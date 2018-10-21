@@ -23,7 +23,7 @@ export class DistanceCalculatorComponent implements OnInit {
 
       // let coords2 = {lat: responses[1].places[0].latitude, lng: responses[1].places[0].longitude};
       let to = turf.point([responses[1].places[0].latitude, responses[1].places[0].longitude]);
-      turf.point()
+
       this.distance = turf.distance(from, to);
     });
     return false;
